@@ -1,5 +1,2 @@
-##candy-bay
-this is a retail shop website made with html css 
-
-
-###one of my baby project
+# baby-projects
+this is some of my baby projects
