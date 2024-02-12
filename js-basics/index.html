@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-papperScissors</title>
+</head>
+
+<body>
+    <div style="margin-bottom: 20px;">
+        <!-- Youtube subscribe button -->
+
+        <p>Youtube Subscribe button</p>
+        <button onclick="ytSub()" id="yt-subscribe">Subscribe</button>
+    </div>
+    <hr>
+
+    <!-- ................................................... -->
+    <div>
+        <!--Amazon shipping calculater  -->
+
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 shipping</p>
+        <p>Orders over $40 = Free shipping</p>
+        <input type="number" placeholder="Cost of order" class="js-input" onkeydown="handkeydown(event)" >
+        <button onclick="
+    calculateTotal()
+    ">Calculate</button>
+    <p class="js-Totalcost"></p>
+
+        <!-- proccess for js:
+    1.figure out what steps we need (algorithm)
+    2.convert these steps into code
+-->
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+        // ..............................................................
+        function ytSub() {
+            const ytBtn = document.querySelector('#yt-subscribe')
+            if (ytBtn.innerText === 'Subscribe') {
+                ytBtn.innerText = 'Subscribed'
+            } else {
+                ytBtn.innerText = 'Subscribe'
+            }
+
+        }
+
+
+        //.................................................................
+
+        /*steps(algorithm)
+        when we click the calculate btn:
+        1.Get the text in the text box 
+        2.if amount < $40,add $10 for shipping &if amount > $40 free shipping
+        3.display total on the page
+        */
+
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-input');
+            let cost =  Number(inputElement.value)
+              if (cost < 40){
+                cost = cost + 10; 
+              }
+              document.querySelector('.js-Totalcost').innerHTML = `$${cost}`
+        }
+
+
+        //on keydown if we press enter the calculate button is triggered
+
+        function handkeydown(event){
+            if (event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>
