@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom exercise</title>
+</head>
+<body>
+ <!--9a and 9b  -->
+<button>9a</button>
+<button class="js-btn">9b</button>
+
+
+<br>
+<br>
+
+<!-- 9c heads and tails -->
+<button onclick="
+document.querySelector('.js-choice')
+  .innerHTML = 'You chose: heads';
+">heads</button>
+
+<button onclick="
+document.querySelector('.js-choice')
+  .innerHTML = 'You chose: tails';
+">tails</button>
+
+<p class="js-choice"></p>
+
+
+<br>
+<br>
+
+<!-- ///////////////////////////// -->
+
+<!-- 9d submi butn --> <!-- 9e added keydown  -->
+
+
+<input type="text" placeholder="enter your name" class="js-input" onkeydown="keyEvent(event)">
+<button onclick="
+const inputValue= document.querySelector('.js-input');
+document.querySelector('.nameD').innerHTML = `your name is ${inputValue.value}`
+">Submit</button>
+<p class="nameD"></p>
+
+
+
+
+<br>
+<br>
+
+<!-- ///////////////////////////// -->
+<!-- 9g amazon shipping calculator -->
+<p>Amazon Shipping Calculator</p>
+<input placeholder="Cost of order" class="js-cost-input" onkeydown="
+  handleCostKeydown(event);
+">
+<button onclick="
+  calculateTotal();
+">Calculate</button>
+<p class="js-total-cost"></p>
+
+<br>
+<br>
+
+
+<!-- ///////////////////////////// -->
+
+<!-- onkeyUP -->
+
+<input type="text" class="inputElement" placeholder="type something"
+onkeyup="
+const inputEle = document.querySelector('.inputElement');
+
+document.querySelector('.keyUp').innerHTML = inputEle.value;
+"
+>
+<p class="keyUp"></p>
+
+
+<br>
+<br>
+<!-- ///////////////////////////// -->
+
+<!-- 9i cart quantity -->
+
+<button onclick="
+ displayCartQuantity()
+">Show Quantity</button>
+
+<button onclick="
+updateCartQuantity(1);
+">Add to Cart</button>
+
+<button onclick="
+updateCartQuantity(2);
+">+2</button>
+
+<button onclick="
+updateCartQuantity(3);
+">+3</button>
+
+<button onclick="
+updateCartQuantity(4);
+">+4</button>
+
+<button onclick="
+updateCartQuantity(5);
+">+5</button>
+
+<button onclick="
+updateCartQuantity(-1);
+">Remove from cart</button>
+
+<button onclick="
+updateCartQuantity(-2);
+">-2</button>
+
+<button onclick="
+updateCartQuantity(-3);
+">-3</button>
+
+<button onclick="
+cartQuantity = 0;
+displayCartQuantity()
+">Reset Cart</button>
+
+<p class="cartQ"></p>
+
+<br>
+<br>
+<!-- ///////////////////////////// -->
+
+
+
+<script>
+
+// 9a-9b
+
+console.log(document.querySelector('button'));
+document.querySelector('.js-btn').innerHTML = '9b done!';
+
+// onKeydown 9e
+
+function keyEvent(event){
+    if (event.key === 'Enter'){
+        const inputValue= document.querySelector('.js-input');
+document.querySelector('.nameD').innerHTML = `your name is ${inputValue.value}`
+    }
+}
+
+// 9g amazon calculator
+
+
+function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
+
+function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value)*100;
+
+        if (cost < 4000) {
+          cost = (cost + 1000);
+        }
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost/100}`;
+      }
+
+
+    
+
+// 9i cart quantity
+
+let cartQuantity = 0;
+
+function updateCartQuantity(change) {
+  if (cartQuantity + change > 10) {
+    alert('The cart is full');
+    return;
+  }
+
+  if (cartQuantity + change < 0) {
+    alert('Not enough items in the cart');
+    return;
+  }
+  
+  cartQuantity += change;
+  displayCartQuantity()
+}
+
+function displayCartQuantity() {
+    document.querySelector('.cartQ').innerHTML = `Cart quantity ${cartQuantity}`;
+      }
+
+
+
+
+</script>
+</body>
+</html>
