@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* ytBtn */
+        .yt-sub {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .subscribe-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .subscribe-btn:hover {
+            transform: scale(1.05);
+        }
+
+
+
+        /* End ytBtn */
+
+
+        /* amazon cart calculator */
+
+        .amznWrap{
+            display: flex;
+            justify-content: center;
+            margin-top: 2em;
+            
+        }
+
+        .amazon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.43);
+            padding: 2em 5em ;
+            width: 50%;
+            height: auto;
+
+        }
+
+        .inputEle {
+            margin-top: 10px;
+            padding: 5px 20px;
+        }
+
+        .amazonBtn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .amazonBtn:hover {
+            transform: scale(1.05);
+        }
+
+        .tCost{
+            font-size:2rem;
+            margin-bottom: 0;
+        }
+
+        .rps{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- youtube subscribe button -->
+    <div class="yt-sub">
+        <h4>Youtube Subscribe Button</h4>
+        <button onclick="ytSub()" id="yt-sub" class="subscribe-btn">Subscribe</button>
+    </div>
+    <!--  end youtube subscribe button -->
+
+  
+    <!-- Amazon calculaor -->
+    <div class="amznWrap">
+    <div class="amazon">
+        <h4>Amazon Shipping Calculator</h4>
+        <small id="small">Orders under $40 = +$10 shipping.</small>
+        <small id="small">Orders over $40 = FREE shipping</small>
+        <input type="text" placeholder="Cost of order" class="inputElement inputEle" onkeydown="handkeydown()">
+        <button onclick="calculateTotal()" class="amazonBtn">Calculate</button>
+        <p class="totalCost tCost"></p>
+    </div>
+</div>
+    <!-- end Amazon calculaor -->
+
+
+    <!-- rock papper scissors -->
+    <div class="rps">
+        <h4>Rock-Papper-Scissors</h4>
+        <a href="RockPapperScissor.html">click here</a>
+    </div>
+
+
+
+    <!-- script starts from here -->
+    <script>
+        // yt-subscibe btn
+
+        function ytSub() {
+            const ytBtn = document.querySelector("#yt-sub")
+            if (ytBtn.innerText === 'Subscribe') {
+                ytBtn.innerText = 'Subscribed'
+                ytBtn.style.backgroundColor = 'red';
+            } else {
+                ytBtn.innerText = 'Subscribe'
+                ytBtn.style.backgroundColor = 'black';
+
+            }
+        }
+        // .......................................................
+
+        // Amazon CartQuantity
+
+        function calculateTotal() {
+            const inputElement = document.querySelector('.inputElement');
+            let cost = Number(inputElement.value) * 100;
+            if (cost < 4000) {
+                cost = cost + 1000;
+            }
+            document.querySelector('.totalCost').innerHTML = `$${cost / 100}`
+        }
+
+        //keyboard of AmazonCalculation field
+        function handkeydown() {
+            if (event.key === 'Enter') {
+                calculateTotal()
+            }
+        }
+
+        //end AmazonCart
+
+    </script>
+</body>
+
+</html>
