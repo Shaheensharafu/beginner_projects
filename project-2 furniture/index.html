@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>HTML and CSS for Complete Beginners: Example 4-1 - Simple landing page</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&display=swap" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	
+		<header id="main-header">
+			<svg data-aos="fade-down"  data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path fill="rgb(60, 56, 71)" fill-opacity="1" d="M0,128L15,149.3C30,171,60,213,90,240C120,267,150,277,180,240C210,203,240,117,270,80C300,43,330,53,360,96C390,139,420,213,450,250.7C480,288,510,288,540,282.7C570,277,600,267,630,256C660,245,690,235,720,240C750,245,780,267,810,245.3C840,224,870,160,900,154.7C930,149,960,203,990,224C1020,245,1050,235,1080,229.3C1110,224,1140,224,1170,192C1200,160,1230,96,1260,106.7C1290,117,1320,203,1350,208C1380,213,1410,139,1425,101.3L1440,64L1440,0L1425,0C1410,0,1380,0,1350,0C1320,0,1290,0,1260,0C1230,0,1200,0,1170,0C1140,0,1110,0,1080,0C1050,0,1020,0,990,0C960,0,930,0,900,0C870,0,840,0,810,0C780,0,750,0,720,0C690,0,660,0,630,0C600,0,570,0,540,0C510,0,480,0,450,0C420,0,390,0,360,0C330,0,300,0,270,0C240,0,210,0,180,0C150,0,120,0,90,0C60,0,30,0,15,0L0,0Z"></path>
+			</svg>
+			<div class="container">
+				<div data-aos="zoom-out" data-aos-duration="3000" data-aos-easing="ease" data-aos-delay="900"><a href="#" class="logo" ><img src="images/landing-page/logo.svg" alt=""></a></div>
+				<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="600">Modern Chairs Crafted With Love</h1>
+				<h2 class="h2-text"data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="600">We love creating the confortable and high quality chairs</h2>
+				<div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="100"><a href="#our-chairs"  class="btn">Discover our chair section</a></div>
+			</div>
+		</header>
+
+		<section id="our-chairs">
+			<div class="container">
+				<header data-aos="fade-up"
+				data-aos-duration="2000">
+					<p class="section-intro">THE SECTION</p>
+					<h3>Our Chairs</h3>
+					<p>We mostly sell one-off items.That means we make one of-a-kind furniture pieces so whoever buys it will have a unique item </p>
+				</header>
+				<div class="gallery">
+					<div data-aos="fade-right"
+					data-aos-offset="300"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-sine">
+						<img src="images/landing-page/furniture-1.jpg" alt="">
+						<p  class="number">01</p>
+						<h4>Tufted white leather sofa chair</h4>
+						<p>This will perfectly fit in a beauty salon or modern home thanks to its modern design</p>
+						<p>289 AED</p>
+					</div>
+					<div data-aos="zoom-in" data-aos-offset="300"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-sine">
+						<img src="images/landing-page/furniture-2.jpg" alt="">
+						<p  class="number">02</p>
+						<h4>Black and brown wooden chair</h4>
+						<p>Both minimalistic and confortable, this is a great choice for home and office</p>
+						<p>99 AED</p>
+					</div>
+					<div data-aos="fade-left"
+					data-aos-offset="300"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-sine" data-aos-delay="300">
+						<img src="images/landing-page/furniture-3.jpg" alt="">
+						<p class="number">03</p>
+						<h4>Rustic wooden bar stool</h4>
+						<p>Made from solid beach wood,this piece will fit nicely in your rustic kitchen</p>
+						<p>599 AED</p>
+					</div>
+				</div>
+				<div data-aos="fade-up"
+				data-aos-duration="3000" data-aos-delay="500">				<p>Interested in our products?<a href="#contact">Send us a message</a> or <a href="#store">visit our store.</a></p>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="contact" class="dark">
+			<div class="container small">
+				<header>
+				<p class="section-intro">CONTACT US</p>
+				<h3>Lets get in touch</h3>
+			</header>
+			</div>
+			<form action="" data-aos="fade-up"
+			data-aos-anchor-placement="center-center"data-aos-duration="2000" data-aos-delay="400">
+			
+				<div class="container small">
+				<div>
+					<label for="contact-name">Name</label>
+					<input type="text" id="contact-name" name="contact-name">
+				</div>
+				<div>
+					<label for="contact-email">Email Address</label>
+					<input type="email" id="contact-email" name="contact-email">
+				</div>
+				<div>
+					<label for="contact-message">Message</label>
+					<textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+				</div>
+
+				<div>
+					<button class="btn">Send Message</button>
+					<p class="muted"><em>All fields are required. we'll contact you as soon as possible.</em></p>
+				</div>
+			</div>
+			</form>
+		</section>
+
+		<section id="store">
+			<div class="container">
+				<p class="section-intro">VISIT OUR STORE</p>
+				<h3 class="large">(971)581415466</h3>
+				<p class="large">Al manakh,Sharjah-UAE  </p>
+
+				<ul class="social-icons">
+					<li><a href=""><img src="images/landing-page/icon-twitter.svg" alt="twitter"></a></li>
+					<li><a href=""><img src="images/landing-page/icon-facebook.svg" alt="facebook"></a></li>
+					<li><a href=""><img src="images/landing-page/icon-instagram.svg" alt="instagram"></a></li>
+				</ul>
+
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<p>&copy copyright 2024 Shane_sharafu. <br>all rights reserved </p>
+			</div>
+		</footer>
+
+<!-- AOS lib -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+		<script>
+			// Initialize AOS
+			AOS.init();
+		</script>
+	</body>
+</html>

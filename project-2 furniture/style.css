@@ -1,0 +1,343 @@
+/* Reset  */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}
+
+/* typography */
+
+
+
+
+html{
+    font-size: 18px;
+}
+
+body{
+    font-family:'poppins',sans-serif;
+    line-height: 1.55;
+    color: rgb(60, 56, 71);
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+h2{
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: rgb(60, 58, 91);
+}
+
+h3{
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+}
+
+h3.large{
+    font-size: 3.5rem;
+}
+
+.dark h3{
+    color: rgb(255, 255, 255);
+}
+
+
+h4{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+
+}
+
+
+p{
+    margin-bottom: 1rem;
+}
+
+p.section-intro{
+    font-weight: 200;
+    letter-spacing: 2px;
+    color: rgb(0 0 0 /.5);
+}
+#contact p.section-intro{
+    color: rgb(255 255 255 /.5);
+}
+
+p.large{
+    font-size: 1.75rem;
+    font-weight: 200;
+    letter-spacing: -1px;
+}
+
+.number{
+    font-size: 1.75rem;
+    font-weight: 200;
+    letter-spacing: -1px;
+    color:  rgb(0 0 0 /.5);
+}
+
+a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #9f7657;
+}
+
+a:hover{
+    color: black;
+}
+
+form input,
+form textarea,
+form button{
+    font-family: 'poppins',sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+
+/* layout */
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.container.small{
+    width: 60%;
+    max-width: 35rem;
+}
+
+/* header */
+
+#main-header{
+    padding:0 0 10rem 0;
+    text-align: center;
+}
+
+section{
+    padding:10rem 0;
+    text-align: center;
+}
+
+#main-header h1{
+    margin: 4rem 0 1rem 0;
+}
+#main-header h2{
+    margin-bottom: 7rem;
+}
+
+.btn{
+    padding:1.3rem 3.5rem;
+    border: 2px solid rgb(159, 118, 87);
+    font-weight: 700;
+}
+
+
+
+.btn:hover{
+    background-color: rgb(60 58 71); 
+    border-color: rgb(60, 58, 71);
+    color: white;
+}
+
+/* chair-section */
+
+#our-chairs{
+    background-color: rgb(239, 240, 234);
+}
+
+section header{
+    margin-bottom: 3.5rem; 
+}
+
+h3+p{
+    max-width:  35rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.5rem;
+    margin-bottom: 3.5rem;
+
+}
+
+img{
+    max-width:100%  ;
+}
+
+.gallery div{
+    text-align: start;
+}
+
+.gallery img{
+    margin-bottom: 1.3rem;
+}
+
+/* contact */
+
+.dark{
+    background-color: rgb(60, 58, 71);
+}
+
+.dark label{
+    color: white;
+}
+
+form div{
+    margin-bottom: 1.75rem;
+}
+
+form label{
+    display:block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: start;
+    margin-bottom: .5rem;
+}
+
+form input,
+textarea{
+    background-color: rgb(255 255 255 /.1);
+    border:none;
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    resize: none;
+}
+
+form input:focus,
+form textarea:focus{
+    outline: none;
+    background-color: rgb(255 255 255 /.2);
+}
+
+form button{
+    width: 100%;
+    cursor: pointer;
+}
+
+.dark .btn{
+    border: 1px solid rgb(255 255 255 /.8);
+    background:transparent;
+    color: white;
+}
+
+.dark .btn:hover{
+    background-color: white;
+    color: black;
+}
+
+p.muted{
+    color: rgb(255 255 255 /.5);
+}
+form button+p{
+    margin-top: 1.75rem;
+}
+
+
+/* store  */
+
+
+.social-icons{
+    list-style: none;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap: 2.5rem;
+    
+}
+
+p.large + .social-icons{
+    margin-top: 7rem;
+}
+
+footer{
+    padding: 5rem 0;
+    text-align: center;
+}
+
+@media screen and (max-width:768px){
+
+    h1,
+    h3.large{
+        font-size: 1.5rem;
+    }
+
+    h2,
+    p.large{
+        font-size: 1.3rem;
+    }
+
+    h3{
+        font-size: 1.8rem;
+    }
+
+    #main-header{
+        padding:0 0 10rem 0;
+        text-align: center;
+    }
+
+    .container.small{
+        width: 85%;
+    }
+
+    #main-header,section{
+        padding: 6rem 0;
+    }
+
+    .btn{
+        padding:1.3rem 1.5rem;
+    }
+
+    footer{
+        padding:2.5rem 0;
+    }
+
+    p.large + .social-icons{
+        margin-top: 3.5rem;
+    }
+
+    #main-header h1{
+        margin-top: 3.5rem;
+    }
+   
+
+}
+
+
+@media screen and (max-width: 800px){
+    .gallery{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #main-header{
+        padding:0 0 8rem 0;
+        text-align: center;
+    }
+
+}
+
+
+
+@media screen and (max-width: 360px){
+    #main-header h2{
+        margin-bottom: 3.5rem;
+    }
+
+    #main-header{
+        padding:0 0 6rem 0;
+        text-align: center;
+    }
+}
+
