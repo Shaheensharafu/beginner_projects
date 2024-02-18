@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+    <script>
+        // breaks and continue
+// skips the number divisible by 3 
+
+// var i = 3;
+//         while (i <= 10) {
+//             if (i % 3 === 0) { // Check for divisibility by 3
+//                 i++;
+//                 continue;
+//             }
+//             console.log(i);
+//             i++;
+//         }
+
+
+
+// ..........................................
+
+// 11o
+
+// const array1 = ['hello','world','search','good']
+// let index = '';
+//   for (let i=0;i < array1.length;i++){
+
+//     if (array1[i] === 'search'){
+//         index = i
+//     }
+//   }
+//   console.log(index)
+// const array1 = ['hello','world','not','good']
+// let index = -1;
+//   for (let i=0;i < array1.length;i++){
+
+//     if (array1[i] === 'search'){
+//         index = i
+//     }
+//   }
+//   console.log(index)
+
+// ..........................................
+// 11p
+
+// const array1 = ['hello','world','search','good','search']
+// let index = -1;
+//   for (let i=0;i < array1.length;i++){
+
+//     if (array1[i] === 'search'){
+//         index = i
+//         break;
+//     }
+//   }
+//   console.log(index)
+
+// ..........................................
+
+// 11q
+// const array1 = ['red','yellow','blue','pink']
+
+// function findIndex(array, word){
+
+//     for (let i=0;i < array1.length;i++){
+//         if (array1[i] === word){
+//             return i
+//         }
+//     }
+//     return -1
+// }
+
+// console.log(findIndex(array1,'yell'))
+
+
+// ..........................................
+// 11r
+
+// remove eggs from array 
+
+// function removeEggs(foods){
+//     let result  = [];
+//     for (let i = 0; i < foods.length; i++){
+//         if (foods[i] === 'eggs'){
+//             continue;
+            
+//         }
+//         result.push(foods[i])
+       
+//     }
+//     return result
+// }
+
+// console.log(removeEggs(['foods','eggs','rassine','sandwich']));
+
+
+// 11s
+// remove first two eggs 
+
+// function removeEggs(foods){
+//     const  result  = [];
+//     let eggsRemoved =0;
+//     for (let i = 0; i < foods.length; i++){
+        
+//         if (foods[i] === 'eggs'&& eggsRemoved<2){
+//             eggsRemoved ++;
+//             continue;
+            
+//         }
+//         result.push(foods[i])
+       
+//     }
+//     return result
+// }
+
+// console.log(removeEggs(['eggs','foods','eggs','rassine','sandwich','eggs','eggs']));
+
+// 11t
+//removed last two eggs and using reverse method
+
+// function removeEggs(foods){
+//     const rev = foods.reverse() // reverse the foods array
+//     const  result  = [];
+//     let eggsRemoved =0;
+//     for (let i = 0; i < foods.length; i++){
+        
+//         if (foods[i] === 'eggs'&& eggsRemoved<2){
+//             eggsRemoved ++;
+//             continue;
+            
+//         }
+//         result.push(rev[i])
+       
+//     }
+//     return result.reverse(); //this will make reverse to back to normal
+// }
+
+// console.log(removeEggs(['eggs','foods','eggs','rassine','sandwich','eggs','eggs']));
+
+// 11u
+//using slice method to make a copy gor the array not like above which is creating a reference of an array
+
+// function removeEggs(foods){
+//     const fcopy = foods.slice()
+    // const rev = fcopy.reverse() // reverse the foods array
+    // const  result  = [];
+    // let eggsRemoved = 0;
+    // for (let i = 0; i < rev.length; i++){
+        
+    //     if (rev[i] === 'eggs'&& eggsRemoved<2){
+//             eggsRemoved ++;
+//             continue;
+            
+//         }
+//         result.push(rev[i])
+       
+//     }
+//     return result.reverse();
+// }
+// const foods = ['eggs','foods','eggs','rassine','sandwich','eggs','eggs']
+// console.log(foods)
+// console.log(removeEggs(foods));
+
+
+
+// ..........................................
+// 11v
+//here is the famous fizzbuzz problem
+
+// for (i=1;i<=20;i++){
+    
+//     if (i % 3 ===0&&i % 5 ===0){
+//         console.log( 'fizzbuzz')
+//     }else if(i % 5 ===0){
+//         console.log('buzz') 
+//     }else if(i % 3 ===0){
+//         console.log( 'fizz')
+   
+//     }else 
+//     console.log(i)
+   
+// }
+
+
+// ..........................................
+// 11w
+
+
+
+
+function findIndex(array, word){
+
+    for (let i=0;i < array.length;i++){
+        if (array[i] === word){
+            return i
+        }
+    }
+    return -1
+}
+
+// console.log(findIndex(array1,'yell'))
+
+function unique(array){
+
+}
+
+
+
+    </script>
+</body>
+</html>
