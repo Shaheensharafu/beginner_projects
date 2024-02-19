@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Advanced Functions</h1>
+
+
+<!-- 12c & 12d -->
+<button onclick="clickEve()" class="start-btn">start</button>
+
+<!-- 12e -->
+<button class="addCartBtn" onclick="addToCart()">
+    Add to cart
+</button>
+<p class="msg"></p>
+
+<!-- 12h -->
+
+<button class="add-btn" onclick="messages++;
+displayNotification()">Add</button>
+<button class="remove-btn" onclick="if (messages >0){
+    messages--
+}
+    if(messages === 0 ){
+        stopNotification()
+    }">Remove</button>
+
+
+
+
+
+
+    <script>
+// 12a & 21b
+// run twice and create a function as argument and initialise function inside a variable
+
+// const add = function (){
+//     console.log(3+2);
+// }
+
+// add()
+// add()
+
+// function runTwice(fun){
+//     fun();
+//     fun();
+// }
+
+// runTwice(function(){
+//     console.log('kaayi')
+// })
+
+// runTwice(add)
+
+//.................................................
+//12c
+
+// function clickEve(){
+//     const button =  document.querySelector('.start-btn')
+
+//     setTimeout(function (){
+//    button.innerText = 'Finished'
+// },1000)
+// }
+
+// 12d
+
+// function clickEve(){
+//     const button =  document.querySelector('.start-btn')
+//     button.innerText='loading...'
+//     setTimeout(function (){
+//    button.innerText = 'Finished!'
+// },1000)
+// }
+
+//.................................................
+// 12e
+// this will display the msg when the btn is triggered and it will display the msg added and afrer the diplay of the msg the msg dissapears 2sn after
+
+// function addToCart(){
+//     const msg = document.querySelector('.msg');
+//     msg.innerHTML = 'Added!'
+
+//     setTimeout(function(){
+//         msg.innerHTML = ''
+//     },2000)
+// }
+
+
+// 12f
+
+// let timeoutId
+// function addToCart(){
+//     const msg = document.querySelector('.msg');
+//     msg.innerHTML = 'Added!'
+//     clearTimeout(timeoutId);
+//     setTimeout(function(){
+//         msg.innerHTML = ''
+//     },2000)
+// }
+
+//..............................................
+
+// 12g
+
+// setInterval(function(){
+//     if(document.title === 'Document'){
+//         document.title = '(2)New messages'
+//     }else{
+//         document.title = 'Document'
+//     }
+// },1000)
+
+
+//..............................................
+
+// 12h
+// let messages = '';
+// setInterval(function(){
+   
+//     if(document.title === 'Document'){
+//         document.title = `(${messages})New messages`
+//     }else{
+//         document.title = 'Document'
+//     }
+// },1000)
+
+
+//..............................................
+// 12i
+
+let messages = 0;
+
+let intervalId;
+
+
+let isDisplayNotification;
+
+displayNotification();
+
+
+function displayNotification(){
+    if(isDisplayNotification){
+        return;
+    }
+    isDisplayNotification = true;
+
+    intervalId = setInterval(function(){
+        if (document.title === 'Document'){
+            document.title = `${messages}New messages`
+        }else{
+            document.title = 'Document'
+        }
+    },1000)
+
+
+    function stopNotification(){
+        isDisplayNotification = false;
+        clearInterval(intervalId) 
+        document.title =  'Document'
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
