@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage with JSON Example</title>
+</head>
+<body>
+  <h1>Local Storage with JSON Example</h1>
+  
+  <label for="input">Enter some text:</label>
+  <input type="text" id="input">
+  <button onclick="saveData()">Save</button>
+
+  <div id="output"></div>
+
+  <script>
+    // Function to save data to local storage
+    function saveData() {
+      // Get the input value
+      var inputData = document.getElementById('input').value;
+
+      // Create an object to store the data
+      var data = {
+        text: inputData,
+        timestamp: new Date().getTime() // Example: Adding a timestamp
+      };
+
+      // Convert the object to a JSON string
+      var jsonData = JSON.stringify(data);
+
+      // Save the JSON string to local storage
+      localStorage.setItem('userData', jsonData);
+
+      // Update the output
+      document.getElementById('output').innerText = 'Data saved to local storage: ' + inputData;
+    }
+
+    // Function to load data from local storage
+    function loadData() {
+      // Check if data exists in local storage
+      if (localStorage.getItem('userData')) {
+        // Get the JSON string from local storage
+        var jsonData = localStorage.getItem('userData');
+
+        // Parse the JSON string to convert it back to an object
+        var data = JSON.parse(jsonData);
+
+        // Display the data
+        document.getElementById('output').innerText = 'Data loaded from local storage: ' + data.text;
+      } else {
+        document.getElementById('output').innerText = 'No data found in local storage';
+      }
+    }
+
+    // Load data when the page loads
+    loadData();
+  </script>
+</body>
+</html>
